@@ -29,7 +29,7 @@ const Profile = () => {
         const getUserDetails = async () => {
 
             try {
-                const res = await axios.get("https://codeechobackend.onrender.com/profile/getuserdetails" , {withCredentials : true}) ; 
+                const res = await axios.get("https://cbackend-1.onrender.com/profile/getuserdetails" , {withCredentials : true}) ; 
 
                 if(res.data.success){
                     setUserName(res.data.user.name) ; 
@@ -59,7 +59,7 @@ const Profile = () => {
         const FetchHistory = async () => {
 
             try {
-                const res = await axios.get("https://codeechobackend.onrender.com/user/usagehistory" , {withCredentials : true} ); 
+                const res = await axios.get("https://cbackend-1.onrender.com/user/usagehistory" , {withCredentials : true} ); 
                 if(res.data.success){
                     setHistory(res.data.history) ; 
                 }
@@ -81,7 +81,7 @@ const Profile = () => {
     const deleteFavHandler = async (id) => {
 
         try {
-            const res = await axios.put("https://codeechobackend.onrender.com/user/deletefavourite" , {id : id} , {withCredentials : true} ); 
+            const res = await axios.put("https://cbackend-1.onrender.com/user/deletefavourite" , {id : id} , {withCredentials : true} ); 
             console.log(res.data) ; 
 
             // seting the favourites
@@ -98,7 +98,7 @@ const Profile = () => {
     const LogoutHandler = async () => {
 
         try {
-            const res = await axios.get("https://codeechobackend.onrender.com/auth/logout" , {withCredentials: true}) ;
+            const res = await axios.get("https://cbackend-1.onrender.com/auth/logout" , {withCredentials: true}) ;
             toast.success(res.data.message) ; 
             localStorage.setItem('isLogged' , 'false' ); 
             setTimeout(() => {
