@@ -1,0 +1,38 @@
+# dependencies
+/node_modules
+
+# production build
+/build
+
+# dotenv environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# editor settings
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# macOS / Linux / Windows system files
+.DS_Store
+Thumbs.db
+
+# coverage output
+coverage/
+
+# Optional lock files (choose based on what you're using)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
